@@ -1,0 +1,40 @@
+# Create file with content directly
+@"
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Power BI
+*.pbix
+*.pbit
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data files (optional)
+*.xlsx
+*.csv
+!sample_data.csv
+
+# Logs
+*.log
+*.sqlite
+*.db
+"@ | Out-File -FilePath .gitignore -Encoding utf8
