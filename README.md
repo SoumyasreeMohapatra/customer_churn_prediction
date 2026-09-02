@@ -1,8 +1,8 @@
-# Churn Analysis and Customer Intelligence 📊
+# customer churn analysis and visualisation
 
 This project performs a comprehensive analysis of customer churn using Python, Pandas, and SQLite. By analyzing customer demographics, subscription details, and support tickets, this notebook identifies key drivers of churn and calculates vital business metrics to help improve customer retention.
 
-## 🚀 Key Features & Analysis
+##Key Features & Analysis
 
 *   **Data Pipeline Integration:** Imports raw data from Excel (`customer_churn_data_raw.xlsx`), stores it locally in an SQLite database (`customer_churn.db`), and queries it into Pandas DataFrames for analysis.
 *   **Data Cleaning & Feature Engineering:** Handles missing values, standardizes data types, and creates new features like `churn_flag`, `tenure_days`, and `churn_risk` profiles.
