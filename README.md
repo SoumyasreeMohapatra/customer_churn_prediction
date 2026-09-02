@@ -1,40 +1,54 @@
-# **Customer Churn Analysis in Power BI**
+# Churn Analysis and Customer Intelligence 📊
 
-## This project uses Power BI Desktop and Excel to help businesses prevent customer loss and improve customer service.
+This project performs a comprehensive analysis of customer churn using Python, Pandas, and SQLite. By analyzing customer demographics, subscription details, and support tickets, this notebook identifies key drivers of churn and calculates vital business metrics to help improve customer retention.
 
-## **Key Features:**
-📌 Predictive Churn Modeling: Identify at-risk customers before they churn, enabling proactive interventions and retention strategies.
+## 🚀 Key Features & Analysis
 
-📌 Customer Segmentation: Group customers based on shared characteristics and churn risk, allowing for targeted marketing and engagement efforts.
-![Customer Churn Dashboard](https://github.com/DataVizExpert-Sham/Predictive-Customer-Analytics-in-Power-BI/assets/151017676/e91b9651-b26e-4ca0-af99-feb91311f5dd)
+*   **Data Pipeline Integration:** Imports raw data from Excel (`customer_churn_data_raw.xlsx`), stores it locally in an SQLite database (`customer_churn.db`), and queries it into Pandas DataFrames for analysis.
+*   **Data Cleaning & Feature Engineering:** Handles missing values, standardizes data types, and creates new features like `churn_flag`, `tenure_days`, and `churn_risk` profiles.
+*   **Key Performance Indicators (KPIs) Calculated:**
+    *   **Churn Rate:** 28.57%
+    *   **Retention Rate:** 71.43%
+    *   **Average Revenue Per User (ARPU):** $18.85
+    *   **Revenue at Risk:** Calculated lost revenue from churned users.
+    *   **Escalation vs. Churn Correlation:** Strong correlation (0.77) identified.
+*   **Visualizations:** Includes comprehensive Matplotlib and Seaborn charts, such as Monthly Churn Trends, Churn Rate by Plan Type/State, and Correlation Heatmaps.
 
-## **Built with:**
-1. Power BI Desktop
-2. Excel
+## 🛠️ Technologies Used
 
-## Key Insights:
-![key insights](https://github.com/DataVizExpert-Sham/Predictive-Customer-Analytics-in-Power-BI/assets/151017676/af60d484-23ad-4c03-ad5a-fc9af7ea0af4)
+*   **Python 3**
+*   **Pandas & NumPy:** For data manipulation and numerical calculations.
+*   **SQLite3:** For lightweight, local database management and SQL querying within Python.
+*   **Matplotlib & Seaborn:** For data visualization and exploratory data analysis (EDA).
+*   **Jupyter Notebook:** Interactive development environment.
 
+## 📂 Dataset Overview
 
-## **Benefits:**
-1. Reduce customer loss: Identify and help customers at risk to keep them longer.
-2. Improve customer satisfaction: Understand customer needs better for better service.
-3. Make data-driven decisions: Use insights to make better choices for keeping customers happy.
-![Customer Risk Analysis](https://github.com/DataVizExpert-Sham/Predictive-Customer-Analytics-in-Power-BI/assets/151017676/17438de8-0003-488f-8c98-5e2e918bd4b7)
+The analysis merges three primary data tables:
+1.  **Customers:** Contains demographic info (`customerid`, `name`, `country`, `state`, `gender`, `dob`).
+2.  **Subscriptions:** Contains billing and plan details (`subscription_start_date`, `plan_type`, `contract_type`, `monthly_charges`, `churn_score`, `cancellation_date`).
+3.  **Support:** Contains customer service interactions (`complaint_date`, `escalations`, `csat_score`).
 
-## **Beyond the Dashboard: Communication for Impact**
-Besides making great dashboards, I also help clients understand the data and make smart decisions with it. By sending clear emails,
-I:
-- Shared important findings: Summarized data nicely focusing on what matters.
-- Tailored messages: Adjusted my language to match the client's knowledge level.
-- Suggested actions: Gave specific advice on what to do next.
-![Email](https://github.com/DataVizExpert-Sham/Predictive-Customer-Analytics-in-Power-BI/assets/151017676/bfa991d6-c901-4a80-b43b-f8a8c8c54aeb)
+## 💻 How to Run the Project
 
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/yourusername/churn-analysis.git](https://github.com/yourusername/churn-analysis.git)
+   cd churn-analysis
+   Install required dependencies:
+Ensure you have Python installed, then run:
 
-**Get Started:**
-1. Get the project files.
-2. Open the Customer Churn Dashboard.pbix & Customer Risk Analysis Dashboard.pbix in Power BI Desktop.
-3. Connect to your data source.
-4. Start improving customer retention!
+Bash
+pip install pandas numpy matplotlib seaborn jupyterlab openpyxl
+Run the Jupyter Notebook:
 
-Use data insights and Power BI dashboards to keep customers happy and engaged. Note: This version highlights the project's benefits for businesses and includes a clear call to action.
+Bash
+jupyter notebook churn_analysis.ipynb
+Note on Data: If you don't have the pre-built customer_churn.db, the notebook includes a script in the first section to automatically generate it from the provided customer_churn_data_raw.xlsx file.
+
+📈 Key Insights
+Customers on the Basic plan have a significantly higher churn rate (60%) compared to Premium (14.2%) and Standard (22.2%) plans.
+
+There is a high correlation between customer support escalations and eventual churn.
+
+Created by Soumyasree Mohapatra
